@@ -1,12 +1,5 @@
 let NewsContainer = document.getElementById("NewsContainer")
 let Inpt = document.getElementById("Inpt");
-function Search()
-{
-
-    let Data = Inpt.value;
-    GetNewsData(Data)
-
-}
 
 
 function Display(AllNews){
@@ -45,7 +38,7 @@ function Display(AllNews){
 }
 
 
-async function GetNewsData(NewsTitle = "India")
+async function GetNewsData(NewsTitle = "India Today")
 {
     let Data = await fetch(`https://newsapi.org/v2/everything?q=${NewsTitle}&apiKey=20fd56da8c1247de82856d2fd80b1211`);
     Data = await Data.json();
